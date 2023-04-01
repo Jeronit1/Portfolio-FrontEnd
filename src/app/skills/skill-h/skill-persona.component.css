@@ -1,0 +1,92 @@
+*, *:before, *:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  
+.icono{
+  position: relative;
+  left: 30px;
+}
+
+  .container {
+    display: inline-block;
+    text-align: center;
+    grid: center;
+    height: 200px;
+    width: 200px;
+    background-color: #ffffff;
+    position: relative;
+    display: grid;
+    left: 100px;
+    border-radius: 8px;
+    place-items: center;
+  }
+  .container:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+  .circular-progress {
+    display: inline-block;
+    grid: center;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: conic-gradient(#4d5bf9 var(--progress, 0%) , #cadcff 0);
+    /* Agregar la propiedad vertical-align */
+    vertical-align: middle;
+  }
+  
+  .circular-progress:before {
+    content: "";
+    position: absolute;
+    height: 75%;
+    width: 75%;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .value-container {
+    display: inline-block;
+    position: relative;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 28px;
+    color: black;
+  }
+  
+    .circular-progress[style*="--progress-value"] {
+      --progress-value: 0;
+      --progress-end-value: 100;
+      --progress: calc(var(--progress-value) / var(--progress-end-value) * 100);
+  
+      background: conic-gradient(#1e90ff var(--progress, 0%), #e4f0fb 0);
+    }
+  
+    .titulo{
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: large;
+    }
+  
+    @media (max-width:992px){
+      .container {
+        text-align: center;
+        left: 0px;
+      }
+    }
+
+    @media (max-width:768px){
+      .container {
+        text-align: center;
+        left: 50px;
+      }
+    }
+    @media (max-width:576px){
+      .container {
+        text-align: center;
+        left: 30px;
+      }
+    }

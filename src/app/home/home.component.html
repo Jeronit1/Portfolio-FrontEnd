@@ -1,0 +1,87 @@
+            
+        <!--------------------     Nav Bar       -------------------->   
+        <nav class="navbar  navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!--Icono-->
+                <a class="navbar-brand" href="">
+                    <i class="bi bi-briefcase-fill"></i>
+                    <span>AR</span>
+                </a>
+                <!--boton del menu-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--Elementos del menu-->
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#trabajo">Trabajo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#educacion">Educacion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#proyectos">Proyectos</a>
+                        </li>
+                        <button *ngIf="getVisible(); else noVisible" class="mx-3 btn btn-dark" (click)="setVisible(false)"><i class="bi bi-eye-fill"></i></button>
+                        <ng-template #noVisible><button  class="mx-3 btn btn-dark" (click)="setVisible(true)"><i class="bi bi-eye-slash-fill"></i></button></ng-template>
+                    </ul>
+                    <hr class="text-white-50">
+                <!--Enlaces redes sociales-->
+                <ul class="navbar-nav flex-row flex-wrap text-light">
+                    <li class="nav-item col-6 col-md-auto p-3">
+                        <i class="bi bi-twitter"> </i>
+                        <small class="d-md-none ms-2">Twitter</small>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto p-3">
+                        <i class="bi bi-facebook"></i>
+                        <small class="d-md-none ms-2">Facebook</small>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto p-3">
+                        <i class="bi bi-instagram"></i>
+                        <small class="d-md-none ms-2">Instagram</small>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto p-3">
+                        <i class="bi bi-github"></i>
+                        <small class="d-md-none ms-2">Github</small>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-warning col-12 logout" type="submit">LOGOUT</button>
+                </form>
+                </div>
+            </div>
+          </nav>
+        <!----------- Perfil   -------------->
+          <app-perfil [visible]="getVisible()"></app-perfil>
+        <!----------- Experiencia laboral   -------------->
+        <section class="container-fluid Secciones" id="trabajo">
+            <a *ngIf="getVisible()" href="#" role="button" class=""><i class="bi bi-plus-square icono fs-4 d-flex"></i></a>
+            <h2 class="text-center">Experiencia Laboral </h2>
+            <app-exp-laboral [visible]="getVisible()"></app-exp-laboral>
+        </section>
+         <!----------- Educacion   -------------->
+        <section class="container-fluid Secciones" id="educacion">
+            <a *ngIf="getVisible()" href="#" role="button" class=""><i class="bi bi-plus-square icono fs-4 d-flex"></i></a>
+            <h2 class="text-center">Estudios y titulos </h2>
+           <app-educacion [visible]="getVisible()"></app-educacion>
+        </section>
+        <!------------- hard & soft skills  --------------->
+        <section class="container-fluid Secciones" id="skills">
+            <a *ngIf="getVisible()" href="#" role="button" class=""><i class="bi bi-plus-square icono fs-4 d-flex"></i></a>
+            <h2 class="text-center">Hard & Soft Skills </h2>
+            <app-skills [visible]="getVisible()"></app-skills>
+        </section>
+        <!------------- Proyectos  --------------->
+        <section class="container-fluid Secciones mt-3" id="proyectos">
+            <a *ngIf="getVisible()" href="#" role="button" class=""><i class="bi bi-plus-square icono fs-4 d-flex"></i></a>
+            <h2 class="text-center">Proyectos </h2>
+            <app-proyecto [visible]="getVisible()"></app-proyecto>
+        </section>
+        

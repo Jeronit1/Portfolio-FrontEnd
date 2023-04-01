@@ -1,0 +1,16 @@
+
+<div class="col-md-4 mt-4 col-sm-6">
+    <div class="container">
+      <div class="icono">
+        <a *ngIf="visible" href="#" role="button" class=""><i class="bi bi-pencil-square icono d-flex mx-3"></i></a>
+        <a *ngIf="visible" href="#" role="button" class=""><i class="bi bi-trash3-fill icono d-flex"></i></a>
+      </div>
+        <div class="circular-progress" [style]="progressStyle">
+          <div class="value-container">
+            {{ progress }}%
+          </div>
+        </div>
+        <span class="titulo">{{titulo}}</span>
+    </div>
+</div>
+
