@@ -7,7 +7,7 @@ import { educacionModel } from '../model/educacion.model';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent {
-
+  ///Obtengo la variable visible
   @Input() visible:boolean=false;
 
 educacionLista:educacionModel[]=[

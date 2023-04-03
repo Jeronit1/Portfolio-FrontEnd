@@ -8,7 +8,7 @@ import { SkillModel } from '../model/skill.model';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-
+  //Variable para mostrar botones de edicion
   @Input() visible:boolean=false;
 
   ngOnInit(): void {

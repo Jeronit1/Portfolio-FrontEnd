@@ -6,7 +6,7 @@ import { proyectoModel } from '../model/proyecto.model';
   styleUrls: ['./proyecto.component.css']
 })
 export class ProyectoComponent {
-
+  //Obtengo la variable para mostrar los botones de edicion
   @Input() visible:boolean=false;
 
   listaProyectos:proyectoModel[]=[

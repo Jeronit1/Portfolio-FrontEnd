@@ -7,7 +7,7 @@ import { perfilModel } from '../model/perfil.model';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent {
-
+//Variable para mostrar los botones de edicion////////
   @Input() visible:boolean=false;
 
 Perfil:perfilModel={nombre:"Jeronimo",

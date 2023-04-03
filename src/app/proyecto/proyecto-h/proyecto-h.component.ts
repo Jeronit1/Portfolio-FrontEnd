@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./proyecto-h.component.css']
 })
 export class ProyectoHComponent {
+  ///Obtengo las variables pasadas del componente padre
  @Input() titulo:String="";
  @Input() descripcion:String="";
  @Input() imagenes:String[]=[];

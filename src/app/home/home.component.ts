@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+///variable para ver los botones de edicion/////
 private visibleEdit:boolean=true;
 
   ///getters
